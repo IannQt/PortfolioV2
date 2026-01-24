@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Student Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Mobile Menu Button -->
+    <button id="mobileMenuBtn" class="mobile-menu-btn">
+        <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <div class="container">
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-profile">
+                    <div class="sidebar-avatar">IJK</div>
+                    <div class="sidebar-user">
+                        <h1 class="sidebar-title">Ian Jay Kyle </h1>
+                        <p class="sidebar-subtitle">IT Professional</p>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="nav">
+    <a href="#dashboard" class="nav-link active">
+        <span class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+        </span>
+        <span>Dashboard</span>
+    </a>
+
+    <a href="#about" class="nav-link">
+        <span class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+        </span>
+        <span>About Me</span>
+    </a>
+
+    <a href="#techstack" class="nav-link">
+        <span class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+        </span>
+        <span>Tech Stack</span>
+    </a>
+
+    <a href="#education" class="nav-link">
+        <span class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+        </span>
+        <span>Education</span>
+    </a>
+
+    <a href="#seminars" class="nav-link">
+        <span class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+        </span>
+        <span>Seminars</span>
+    </a>
+
+    <a href="#projects" class="nav-link">
+        <span class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+        </span>
+        <span>Projects</span>
+    </a>
+
+    <a href="#contact" class="nav-link">
+        <span class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+        </span>
+        <span>Contact</span>
+    </a>
+</nav>
+
+            <!-- <div class="theme-toggle">
+                <button id="themeToggle" aria-label="Toggle theme">
+                    <span id="themeIcon">🌙</span>
+                    <span class="theme-text">Dark Mode</span>
+                </button>
+            </div> -->
+
+        </aside>
+
+        <!-- Overlay for mobile -->
+        <div id="overlay" class="overlay"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Overview -->
+            <section id="dashboard" class="section">
+                <h2 class="section-title">Dashboard Overview</h2>
+                
+                <!-- Profile Card -->
+                <div class="profile-card">
+                    <div class="profile-flex">
+                        <!-- Profile Image -->
+                        <div class="profile-image-wrapper">
+                            <img src="Assets/ian.JPG" 
+                                 alt="Profile Picture" 
+                                 class="profile-image">
+                            <div class="status-indicator"></div>
+                        </div>
+                        <!-- Profile Info -->
+                        <div class="profile-info">
+                            <h3 class="profile-name">Hi, I'm Ian Jay Kyle D. Tipanero</h3>
+                            <p class="profile-role">| IT Professional | Web Developer | Tech Enthusiast</p>
+                            <p class="profile-welcome">Passionate and Detail-oriented IT professional specializing in web systems, database management, 
+                                and technical support. Skilled in web development and system documentation, with a strong commitment to
+                                 delivering reliable and scalable solutions. Continuously expanding technical knowledge to keep pace with 
+                                 evolving technologies and industry best practices.</p>
+
+                             <!-- Social Media Links -->
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/ianjaykyletipanero" target="_blank" class="social-link facebook" title="Facebook">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    </svg>
+                                </a>
+
+                                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fiann_qtt%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExTDZvR0prZERqZ2NWVFlMM3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6RjklA5P4VypBaGwRucu_BR_2N8A7RlSN9vSwyUBWbH0nf5cA5_1HBrJbOxg_aem_VNmLciA-FWGmi5KWuwismQ&h=AT3Sral3gUDLlC5YUhyGkfDHeM8s1CIdszBtOvTwp3k19I30wqjT_jrmurHu8EoqbV-cb4dRwmIIH4RqHRY2z7WU7bPfEn7-dV6KWRuWUmHa_HiL1XOZZeAF5ibPdIJPcEw-" target="_blank" class="social-link instagram" title="Instagram">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                    </svg>
+                                </a>
+
+                                <!-- <a href="https://twitter.com/yourprofile" target="_blank" class="social-link twitter" title="Twitter/X">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                    </svg>
+                                </a> -->
+
+                                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Flinkedin.com%2Fin%2Fian-jay-kyle-tipanero-1a547038a%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExTDZvR0prZERqZ2NWVFlMM3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR43BFsYjV-XA4nlEO_mMHMqWJeWCL0ldDrfi20wb5I7SrCfC2GaRompLtFJnQ_aem_e9Rvf6vblxLjXXkz62sHFA&h=AT2olXiNYUO_mkoLB8L5kP3UOPhG4CtCe2wduByQkEilmTLMqy5ZFherwtnHUEMoHAadXM_d-pL2E2M2l0m1xsBx9qoW-vB6y3EJOyXQKTCoi2sppSvjfxrGISu6wy8xjcQ0" target="_blank" class="social-link linkedin" title="LinkedIn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://github.com/IannQt"
+                                    target="_blank"
+                                    class="social-link github"
+                                    title="GitHub">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 .297c-6.63 0-12 5.373-12 12 
+                                            0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 
+                                            0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61
+                                            -.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.084-.73.084-.73
+                                            1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 
+                                            3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332
+                                            -5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523
+                                            .105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 
+                                            3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 
+                                            3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 
+                                            1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92
+                                            .42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286
+                                            0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297
+                                            c0-6.627-5.373-12-12-12"/>
+                                        </svg>
+                                    </a>
+                            </div>
+                                
+                            <div class="cv-buttons">
+                                <a href="ResumesaPortfolio.pdf" class="btn btn-primary" download>
+                                    <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                    Download CV
+                                </a>
+                                <a href="ResumesaPortfolio.pdf" class="btn btn-secondary">
+                                    <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                    </svg>
+                                    View CV
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number stat-blue">4+</div>
+                        <h3 class="stat-title">Projects Completed</h3>
+                        <p class="stat-desc">Various IT projects</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number stat-green">4+</div>
+                        <h3 class="stat-title">Seminars Attended</h3>
+                        <p class="stat-desc">Professional development</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number stat-purple stat-text">Camarines Sur Polytechnic Colleges</div>
+                        <p class="stat-desc">San Miguel, Nabua, Camarines Sur</p>
+                        <h3 class="stat-title">Institution</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Me -->
+            <section id="about" class="section">
+                <h2 class="section-title">About Me</h2>
+                <div class="card">
+                    <div class="about-flex">
+                        <div class="about-content">
+                        <h3 class="about-name">Personal Information</h3>
+
+                        <div class="about-info-grid">
+                            <div class="about-info-item">
+                                <span class="info-label">Date of Birth</span>
+                                <span class="info-value">January 19, 2004</span>
+                            </div>
+
+                            <div class="about-info-item">
+                                <span class="info-label">Age</span>
+                                <span class="info-value">21</span>
+                            </div>
+
+                            <div class="about-info-item">
+                                <span class="info-label">Gender</span>
+                                <span class="info-value">Male</span>
+                            </div>
+
+                            <div class="about-info-item">
+                                <span class="info-label">Citizenship</span>
+                                <span class="info-value">Filipino</span>
+                            </div>
+
+                            <div class="about-info-item">
+                                <span class="info-label">Religion</span>
+                                <span class="info-value">Roman Catholic</span>
+                            </div>
+
+                            <div class="about-info-item">
+                                <span class="info-label">Address</span>
+                                <span class="info-value">Zone 2, Masoli Bato Camarines Sur, Bicol, Philippines, 4435</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tech Stack -->
+            <section id="techstack" class="section">
+                <h2 class="section-title">Tech Stack</h2>
+                <div class="card">
+                    <h3 class="techstack-subtitle">Technologies I work with</h3>
+                    <div class="techstack-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">🌐</div>
+                            <h4 class="tech-name">HTML</h4>
+                            <p class="tech-desc">Semantic markup and structure</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🎨</div>
+                            <h4 class="tech-name">CSS</h4>
+                            <p class="tech-desc">Styling and animations</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">💨</div>
+                            <h4 class="tech-name">Tailwind CSS</h4>
+                            <p class="tech-desc">Utility-first framework</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🅱️</div>
+                            <h4 class="tech-name">Bootstrap</h4>
+                            <p class="tech-desc">Responsive components</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🐘</div>
+                            <h4 class="tech-name">PHP</h4>
+                            <p class="tech-desc">Server-side scripting</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🗄️</div>
+                            <h4 class="tech-name">MySQL</h4>
+                            <p class="tech-desc">Database management</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section id="education" class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-list">
+                    <div class="card">
+                        <div class="education-header">
+                            <div>
+                                <h3 class="education-degree">Bachelor of Science in Information Technology</h3>
+                                <p class="education-school">Camarines Sur Polytechnic Colleges</p>
+                            </div>
+                            <span class="education-year">2022 - 2026</span>
+                        </div>
+                        <p class="education-major">Information Technology</p>
+                        <!-- <p class="education-courses">Relevant Coursework: Data Structures, Web Development, Database Systems, Network Security, Software Engineering</p> -->
+                    </div>
+                    <div class="card">
+                        <div class="education-header">
+                            <div>
+                                <h3 class="education-degree">Senior High School - GAS</h3>
+                                <p class="education-school">Holy Trinity College of Camarines Sur</p>
+                            </div>
+                            <span class="education-year">2020 - 2022</span>
+                        </div>
+                        <p class="education-major">General Academic Strand</p>
+                        <p class="education-major">With Honors</p>
+                    </div>
+                    <div class="card">
+                        <div class="education-header">
+                            <div>
+                                <h3 class="education-degree">Junior High School</h3>
+                                <p class="education-school">Holy Trinity College of Camarines Sur</p>
+                            </div>
+                            <span class="education-year">2017 - 2020</span>
+                        </div>
+                        <p class="education-major">With Honors</p>
+                    </div>
+                    <div class="card">
+                        <div class="education-header">
+                            <div>
+                                <h3 class="education-degree">Elementary School</h3>
+                                <p class="education-school">Masoli Elementary School</p>
+                            </div>
+                            <span class="education-year">2010 - 2016</span>
+                        </div>
+                        <p class="education-major">With Honors</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seminars -->
+
+            <section id="seminars" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Seminars Attended</h2>
+                    <button id="viewAllCertificates" class="view-all-btn">
+                        <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        View All Certificates
+                    </button>
+                </div>
+                
+                <div class="seminars-grid">
+                    <div class="card">
+                        <h3 class="seminar-title">11th Bicol Youth Congress in Information Technology</h3>
+                        <p class="seminar-org">Camarines Sur Polytechnic Colleges - JPCS Chapter | April 20-21, 2023</p>
+                        <p class="seminar-desc">"Metaverse: Transcending Future to Digital Reality"</p>
+                        <a href="Assets/by11.png" target="_blank" class="project-link">View Certificate →</a>
+                    </div>
+                    <div class="card">
+                        <h3 class="seminar-title">12th Bicol Youth Congress in Information Technology</h3>
+                        <p class="seminar-org">Camarines Sur Polytechnic Colleges - JPCS Chapter | April 18-19, 2024</p>
+                        <p class="seminar-desc">"Infinite Loops: Exploring Endless Possibilities of Technology"</p>
+                        <a href="Assets/by-12.png" target="_blank" class="project-link">View Certificate →</a>
+                    </div>
+                    <div class="card">
+                        <h3 class="seminar-title">13th Bicol Youth Congress in Information Technology</h3>
+                        <p class="seminar-org">Camarines Sur Polytechnic Colleges - JPCS Chapter | April 10-11, 2025</p>
+                        <p class="seminar-desc">"Bit13yte: Building the Future of Technology, One Byte at a Time"</p>
+                        <a href="Assets/by-13.png" target="_blank" class="project-link">View Certificate →</a>
+                    </div>
+                    <div class="card">
+                        <h3 class="seminar-title">Awareness Campaign</h3>
+                        <p class="seminar-org">Camarines Sur Polytechnic Colleges - ASOG Chapter | March 10-14, 2025</p>
+                        <p class="seminar-desc">"Turning Concepts into Startups Through Technology Business Incubation"</p>
+                        <a href="Assets/by11-2.png" target="_blank" class="project-link">View Certificate →</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certificates Modal -->
+            <div id="certificatesModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">All Certificates</h2>
+                        <button class="modal-close" id="closeModal">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="certificates-grid">
+                            <div class="certificate-item" data-cert-index="0">
+                                <div class="certificate-preview">
+                                    <img src="Assets/by11.png" alt="Certificate 1" />
+                                </div>
+                                <div class="certificate-info">
+                                    <h3>11th Bicol Youth Congress in IT</h3>
+                                    <p>April 20-21, 2023</p>
+                                    <button class="cert-link view-cert-btn" data-cert-index="0">View Full Certificate</button>
+                                </div>
+                            </div>
+
+                            <div class="certificate-item" data-cert-index="1">
+                                <div class="certificate-preview">
+                                    <img src="Assets/by-12.png" alt="Certificate 2" />
+                                </div>
+                                <div class="certificate-info">
+                                    <h3>12th Bicol Youth Congress in IT</h3>
+                                    <p>April 18-19, 2024</p>
+                                    <button class="cert-link view-cert-btn" data-cert-index="1">View Full Certificate</button>
+                                </div>
+                            </div>
+
+                            <div class="certificate-item" data-cert-index="2">
+                                <div class="certificate-preview">
+                                    <img src="Assets/by-13.png" alt="Certificate 3" />
+                                </div>
+                                <div class="certificate-info">
+                                    <h3>13th Bicol Youth Congress in IT</h3>
+                                    <p>April 10-11, 2025</p>
+                                    <button class="cert-link view-cert-btn" data-cert-index="2">View Full Certificate</button>
+                                </div>
+                            </div>
+
+                            <div class="certificate-item" data-cert-index="3">
+                                <div class="certificate-preview">
+                                    <img src="Assets/by11-2.png" alt="Certificate 4" />
+                                </div>
+                                <div class="certificate-info">
+                                    <h3>Awareness Campaign</h3>
+                                    <p>March 10-14, 2025</p>
+                                    <button class="cert-link view-cert-btn" data-cert-index="3">View Full Certificate</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Lightbox -->
+            <div id="imageLightbox" class="lightbox">
+                <button class="lightbox-close" id="closeLightbox">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                
+                <button class="lightbox-nav lightbox-prev" id="prevCert">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                
+                <button class="lightbox-nav lightbox-next" id="nextCert">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                
+                <div class="lightbox-content">
+                    <img id="lightboxImage" src="" alt="Certificate" />
+                    <div class="lightbox-caption" id="lightboxCaption"></div>
+                </div>
+                
+                <div class="lightbox-counter" id="lightboxCounter">1 / 4</div>
+            </div>
+
+            <!-- Projects -->
+            <section id="projects" class="section">
+                <h2 class="section-title">Personal / Capstone / School Projects</h2>
+                <div class="projects-grid">
+
+                    <div class="card project-card">
+                        <h3 class="project-title">Sizzling Pinoy a Recipes Website</h3>
+                        <h4>1ST YEAR PROJECT</h4>
+                        <p class="project-desc">
+                            Website that features a vast collection of traditional Filipino dishes such as adobo, pancit, kare-kare, and lechon, complete with detailed 
+                            instructions and helpful tips to make cooking a breeze. At Sizzling Pinoy, we bring you the best Filipino recipes prepared with love
+                            and care, just like how it's done in our Filipino homes. We believe that food is a reflection of culture, tradition, and values,
+                             and our passionate team of food enthusiasts works tirelessly to showcase the rich culinary heritage of the Philippines.
+                        </p>
+                        <p>STATIC WEBSITE</p>
+                        <div class="project-tags">
+                            <span class="tag tag-blue">HTML</span>
+                            <span class="tag tag-green">CSS</span>
+                            <span class="tag tag-purple">JavaScript</span>
+                        </div>
+                        <a href="https://iannqt.github.io/SizzlingPinoyWeb/home.html" class="project-link">View Live Static Project →</a>
+                    </div>
+
+                    <div class="card project-card">
+                        <h3 class="project-title">Gym Members Record Management System - Developer/Programmer</h3>
+                        <h4>2ND YEAR PROJECT</h4>
+                        <p class="project-desc"> Developed a record management system for gym establishment to manage member information, membership packages, trainers, and daily visitors logs. 
+                        The system streamlines the process of tracking and organizing member data, membership plans, trainer assignments, and visitor logs, enhancing operational efficiency and customer service.
+                        It reduces reliance on manual record keeping by providing a centralized and structured data management solution.
+                        Applied object-oriented design using core system classes such as Member, Membership Package, Trainer, and Visitor Log.
+                        Implemented CRUD
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag tag-blue">Java</span>
+                        </div>
+                        <a href="Assets/IT2BGroup5 - Proposal.pdf" class="project-link">View Project Documentation →</a>
+                    </div>
+
+                    <div class="card project-card">
+                        <h3 class="project-title">Barangay Clearance and Certification System - Developer/Programmer/Documentation</h3>
+                        <h4>3RD YEAR PROJECT</h4>
+                        <p class="project-desc"> A Web-based system that handles online certificate requests from barangay residents.
+                        It streamlines the process of requesting and issuing barangay clearances and certifications, reducing manual paperwork and improving efficiency. 
+                        The system allows residents to submit requests online, track the status of their applications, and receive digital certificates upon approval.
+                        </p>
+                        <p class="project-desc"> Implemented CRUD</p>
+                        <div class="project-tags">
+                            <span class="tag tag-blue">React</span>
+                            <span class="tag tag-green">PHP Code Igniter</span>
+                            <span class="tag tag-green">Tailwind</span>
+                            <span class="tag tag-purple">MySQL</span>
+                        </div>
+                        <a href="#barangayDocs"
+                            id="viewBarangayDocs"
+                            class="project-link project-link-btn">
+                            View Project Documentation →
+                        </a>
+                    </div>
+
+                    <div class="card project-card">
+                        <h3 class="project-title">WEB BASED HEALTH MANAGEMENT SYSTEM WITH DATA ANALYTICS AND RFID FOR CAMARINES SUR POLYTECHNIC COLLEGES CLINIC</h3>
+                        <h4>3RD-4TH YEAR CAPSTONE PROJECT</h4>
+                        <p class="project-desc">
+                            Develop a dynamic web platform that streamlines health record management for CSPC Clinic, incorporating RFID technology for efficient patient identification and data retrieval.
+                            The system features comprehensive CRUD functionalities for patient records, appointments, and medical history, ensuring accurate and up-to-date information.
+                            Integrated data analytics tools provide valuable insights into health trends, enabling informed decision-making and proactive healthcare
+                            management.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag tag-blue">React</span>
+                            <span class="tag tag-blue">PHP(Code Igniter)</span>
+                            <span class="tag tag-green">JavaScript</span>
+                            <span class="tag tag-green">API</span>
+                            <span class="tag tag-purple">Tailwind</span>
+                            <span class="tag tag-purple">Chart.js</span>
+                            <span class="tag tag-purple">MySQL</span>
+                        </div>
+                        <a href="Assets/CapstoneSystemDocumentation.pdf" class="project-link">View Project Documentation→</a>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- Barangay Documentation Modal -->
+            <div id="barangayDocsModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Barangay Clearance and Certification System Screenshot Documentation</h2>
+                        <button class="modal-close" id="closeBarangayModal">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="documentation-grid">
+                            <div class="documentation-item" data-doc-index="0">
+                                <div class="documentation-preview">
+                                    <img src="Assets/barangay/user/usertype.png" alt="Documentation Page 1" />
+                                </div>
+                                <div class="documentation-info">
+                                    <h3>Page 1</h3>
+                                    <p>User Type Selection</p>
+                                    <button class="cert-link view-doc-btn" data-doc-index="0">View Full Page</button>
+                                </div>
+                            </div>
+
+                            <div class="documentation-item" data-doc-index="1">
+                                <div class="documentation-preview">
+                                    <img src="Assets/barangay/user/user.png" alt="Documentation Page 2" />
+                                </div>
+                                <div class="documentation-info">
+                                    <h3>Page 2</h3>
+                                    <p>User Login</p>
+                                    <button class="cert-link view-doc-btn" data-doc-index="1">View Full Page</button>
+                                </div>
+                            </div>
+
+                            <div class="documentation-item" data-doc-index="2">
+                                <div class="documentation-preview">
+                                    <img src="Assets/barangay/user/register.png" alt="Documentation Page 3" />
+                                </div>
+                                <div class="documentation-info">
+                                    <h3>Page 3</h3>
+                                    <p>User Registration</p>
+                                    <button class="cert-link view-doc-btn" data-doc-index="2">View Full Page</button>
+                                </div>
+                            </div>
+
+                            <div class="documentation-item" data-doc-index="3">
+                                <div class="documentation-preview">
+                                    <img src="Assets/barangay/user/dashboard.png" alt="Documentation Page 4" />
+                                </div>
+                                <div class="documentation-info">
+                                    <h3>Page 4</h3>
+                                    <p>User Dashboard</p>
+                                    <button class="cert-link view-doc-btn" data-doc-index="3">View Full Page</button>
+                                </div>
+                            </div>
+
+                            <div class="documentation-item" data-doc-index="4">
+                                <div class="documentation-preview">
+                                    <img src="Assets/barangay/user/document.png" alt="Documentation Page 5" />
+                                </div>
+                                <div class="documentation-info">
+                                    <h3>Page 5</h3>
+                                    <p>Documents Type</p>
+                                    <button class="cert-link view-doc-btn" data-doc-index="4">View Full Page</button>
+                                </div>
+                            </div>
+
+                            <div class="documentation-item" data-doc-index="5">
+                                <div class="documentation-preview">
+                                    <img src="Assets/barangay/user/request.png" alt="Documentation Page 6" />
+                                </div>
+                                <div class="documentation-info">
+                                    <h3>Page 6</h3>
+                                    <p>Document Request</p>
+                                    <button class="cert-link view-doc-btn" data-doc-index="5">View Full Page</button>
+                                </div>
+                            </div>
+
+                            <div class="documentation-item" data-doc-index="6">
+                                <div class="documentation-preview">
+                                    <img src="Assets/barangay/user/track.png" alt="Documentation Page 7" />
+                                </div>
+                                <div class="documentation-info">
+                                    <h3>Page 7</h3>
+                                    <p>Track Request</p>
+                                    <button class="cert-link view-doc-btn" data-doc-index="6">View Full Page</button>
+                                </div>
+                            </div>
+
+                            <div class="documentation-item" data-doc-index="7">
+                                <div class="documentation-preview">
+                                    <img src="Assets/barangay/user/profile.png" alt="Documentation Page 8" />
+                                </div>
+                                <div class="documentation-info">
+                                    <h3>Page 8</h3>
+                                    <p>User Profile</p>
+                                    <button class="cert-link view-doc-btn" data-doc-index="7">View Full Page</button>
+                                </div>
+                            </div>
+
+                            <div class="documentation-item" data-doc-index="8">
+                                <div class="documentation-preview">
+                                    <img src="Assets/barangay/admin/admin.png" alt="Documentation Page 9" />
+                                </div>
+                                <div class="documentation-info">
+                                    <h3>Page 9</h3>
+                                    <p>Admin Login</p>
+                                    <button class="cert-link view-doc-btn" data-doc-index="8">View Full Page</button>
+                                </div>
+                            </div>
+
+                            <div class="documentation-item" data-doc-index="9">
+                                <div class="documentation-preview">
+                                    <img src="Assets/barangay/admin/admin-dashboard.png" alt="Documentation Page 10" />
+                                </div>
+                                <div class="documentation-info">
+                                    <h3>Page 10</h3>
+                                    <p>Admin Dashboard</p>
+                                    <button class="cert-link view-doc-btn" data-doc-index="9">View Full Page</button>
+                                </div>
+                            </div>
+
+                            <div class="documentation-item" data-doc-index="10">
+                                <div class="documentation-preview">
+                                    <img src="Assets/barangay/admin/admin-request.png" alt="Documentation Page 11" />
+                                </div>
+                                <div class="documentation-info">
+                                    <h3>Page 11</h3>
+                                    <p>User Request Document</p>
+                                    <button class="cert-link view-doc-btn" data-doc-index="10">View Full Page</button>
+                                </div>
+                            </div>
+
+                            <div class="documentation-item" data-doc-index="11">
+                                <div class="documentation-preview">
+                                    <img src="Assets/barangay/admin/admin-approve.png" alt="Documentation Page 12" />
+                                </div>
+                                <div class="documentation-info">
+                                    <h3>Page 12</h3>
+                                    <p>Admin Approval</p>
+                                    <button class="cert-link view-doc-btn" data-doc-index="11">View Full Page</button>
+                                </div>
+                            </div>
+
+                            <div class="documentation-item" data-doc-index="12">
+                                <div class="documentation-preview">
+                                    <img src="Assets/barangay/admin/admin-reject.png" alt="Documentation Page 13" />
+                                </div>
+                                <div class="documentation-info">
+                                    <h3>Page 13</h3>
+                                    <p>Admin Rejection</p>
+                                    <button class="cert-link view-doc-btn" data-doc-index="12">View Full Page</button>
+                                </div>
+                            </div>
+
+                            <div class="documentation-item" data-doc-index="13">
+                                <div class="documentation-preview">
+                                    <img src="Assets/barangay/admin/admin-userregister.png" alt="Documentation Page 14" />
+                                </div>
+                                <div class="documentation-info">
+                                    <h3>Page 14</h3>
+                                    <p>Admin User Registration</p>
+                                    <button class="cert-link view-doc-btn" data-doc-index="13">View Full Page</button>
+                                </div>
+                            </div>
+
+                            <div class="documentation-item" data-doc-index="14">
+                                <div class="documentation-preview">
+                                    <img src="Assets/barangay/admin/admin-viewinfo.png" alt="Documentation Page 15" />
+                                </div>
+                                <div class="documentation-info">
+                                    <h3>Page 15</h3>
+                                    <p>Admin View Information</p>
+                                    <button class="cert-link view-doc-btn" data-doc-index="14">View Full Page</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documentation Image Lightbox -->
+            <div id="docLightbox" class="lightbox">
+                <button class="lightbox-close" id="closeDocLightbox">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                
+                <button class="lightbox-nav lightbox-prev" id="prevDoc">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                
+                <button class="lightbox-nav lightbox-next" id="nextDoc">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                
+                <div class="lightbox-content">
+                    <img id="docLightboxImage" src="" alt="Documentation" />
+                    <div class="lightbox-caption" id="docLightboxCaption"></div>
+                </div>
+                
+                <div class="lightbox-counter" id="docLightboxCounter">1 / 15</div>
+            </div>
+
+            <!-- Contact Footer -->
+            <section id="contact" class="section">
+                <h2 class="section-title">Contact</h2>
+                <div class="card contact-card">
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <h3 class="contact-label">Email</h3>
+                            <p class="contact-value">kyletipanero19@email.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <h3 class="contact-label">Phone</h3>
+                            <p class="contact-value">+63 951 497 9533</p>
+                        </div>
+                        <div class="contact-item contact-item-wide">
+                            <div class="contact-icon">🔗</div>
+                            <h3 class="contact-label">LinkedIn</h3>
+                            <p class="contact-value">www.linkedin.com/in/ian-jay-kyle-tipanero-1a547038a</p>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <p class="footer-text">© 2026 Ian Jay Kyle Tipanero. All rights reserved.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
