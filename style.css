@@ -1457,8 +1457,10 @@ body.light-mode .modal-close:hover {
     }
 }
 
+/* ===================================
+   CONTACT SECTION
+=================================== */
 
-/* Contact */
 .contact-card {
     padding: 2rem;
 }
@@ -1473,6 +1475,7 @@ body.light-mode .modal-close:hover {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 @media (min-width: 640px) {
@@ -1489,6 +1492,17 @@ body.light-mode .modal-close:hover {
 
 .contact-item {
     text-align: center;
+    padding: 2rem 1.5rem;
+    background-color: #111827;
+    border-radius: 0.5rem;
+    border: 1px solid #374151;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    border-color: #60a5fa;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(96, 165, 250, 0.2);
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
@@ -1499,29 +1513,56 @@ body.light-mode .modal-close:hover {
 
 .contact-icon {
     color: #60a5fa;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .contact-label {
-    font-weight: 600;
-    margin-bottom: 0.25rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: #f3f4f6;
 }
 
 .contact-value {
     color: #9ca3af;
     font-size: 0.875rem;
-    word-break: break-all;
+    word-break: break-word;
+    line-height: 1.5;
+}
+
+.contact-link {
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+    color: #60a5fa;
 }
 
 @media (max-width: 639px) {
+    .contact-item {
+        padding: 1.5rem 1rem;
+    }
+    
+    .contact-icon {
+        font-size: 2rem;
+    }
+    
+    .contact-label {
+        font-size: 1rem;
+    }
+    
     .contact-value {
         font-size: 0.75rem;
     }
 }
 
+/* Footer */
 .footer {
-    margin-top: 2rem;
+    margin-top: 0;
+    padding-top: 2rem;
+    border-top: 1px solid #374151;
     text-align: center;
 }
 
@@ -1535,6 +1576,37 @@ body.light-mode .modal-close:hover {
         font-size: 0.75rem;
     }
 }
+
+/* Light Mode Support */
+body.light-mode .contact-item {
+    background-color: #ffffff;
+    border-color: #e2e8f0;
+}
+
+body.light-mode .contact-item:hover {
+    border-color: #60a5fa;
+}
+
+body.light-mode .contact-label {
+    color: #0f172a;
+}
+
+body.light-mode .contact-value {
+    color: #64748b;
+}
+
+body.light-mode .contact-link:hover {
+    color: #3b82f6;
+}
+
+body.light-mode .footer {
+    border-top-color: #e2e8f0;
+}
+
+body.light-mode .footer-text {
+    color: #64748b;
+}
+
 
 /* ===============================
    ABOUT ME – RESPONSIVE & SAFE
@@ -2071,4 +2143,5 @@ body.light-mode .documentation-info p {
         height: 220px;
     }
 }
+
 
