@@ -5,111 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT Student Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Mobile Menu Button -->
-    <button id="mobileMenuBtn" class="mobile-menu-btn">
-        <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-    </button>
+    <!-- Top Navigation Bar -->
+    <nav class="top-navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <h1 class="navbar-title">Iann_qtt</h1>
+            </div>
+            <button id="mobileMenuBtn" class="mobile-menu-btn">
+                <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <div id="navMenu" class="nav-menu">
+                <a href="#dashboard" class="nav-link active">Dashboard</a>
+                <a href="#about" class="nav-link">About Me</a>
+                <a href="#techstack" class="nav-link">Tech Stack</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#seminars" class="nav-link">Seminars</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
 
     <!-- Sidebar Navigation -->
     <div class="container">
         <aside id="sidebar" class="sidebar">
-            <div class="sidebar-header">
-                <div class="sidebar-profile">
-                    <div class="sidebar-avatar">IJK</div>
-                    <div class="sidebar-user">
-                        <h1 class="sidebar-title">Ian Jay Kyle </h1>
-                        <p class="sidebar-subtitle">IT Professional</p>
-                    </div>
-                </div>
-            </div>
-
-            <nav class="nav">
-    <a href="#dashboard" class="nav-link active">
-        <span class="nav-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-            </svg>
-        </span>
-        <span>Dashboard</span>
-    </a>
-
-    <a href="#about" class="nav-link">
-        <span class="nav-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-        </span>
-        <span>About Me</span>
-    </a>
-
-    <a href="#techstack" class="nav-link">
-        <span class="nav-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <line x1="8" y1="21" x2="16" y2="21"></line>
-                <line x1="12" y1="17" x2="12" y2="21"></line>
-            </svg>
-        </span>
-        <span>Tech Stack</span>
-    </a>
-
-    <a href="#education" class="nav-link">
-        <span class="nav-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-            </svg>
-        </span>
-        <span>Education</span>
-    </a>
-
-    <a href="#seminars" class="nav-link">
-        <span class="nav-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-            </svg>
-        </span>
-        <span>Seminars</span>
-    </a>
-
-    <a href="#projects" class="nav-link">
-        <span class="nav-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="7" height="7"></rect>
-                <rect x="14" y="3" width="7" height="7"></rect>
-                <rect x="14" y="14" width="7" height="7"></rect>
-                <rect x="3" y="14" width="7" height="7"></rect>
-            </svg>
-        </span>
-        <span>Projects</span>
-    </a>
-
-    <a href="#contact" class="nav-link">
-        <span class="nav-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-        </span>
-        <span>Contact</span>
-    </a>
-</nav>
-
-            <!-- <div class="theme-toggle">
-                <button id="themeToggle" aria-label="Toggle theme">
-                    <span id="themeIcon">🌙</span>
-                    <span class="theme-text">Dark Mode</span>
-                </button>
-            </div> -->
-
         </aside>
 
         <!-- Overlay for mobile -->
@@ -138,6 +68,7 @@
                             <p class="profile-welcome"> Welcome to my portfolio! Explore my projects, 
                                 skills, and experiences in the world of IT and web development.
                             </p>
+
                              <!-- Social Media Links -->
                             <div class="social-links">
                                 <a href="https://www.facebook.com/ianjaykyletipanero" target="_blank" class="social-link facebook" title="Facebook">
@@ -187,13 +118,13 @@
                             </div>
                                 
                             <div class="cv-buttons">
-                                <a href="Resume-updated.pdf" class="btn btn-primary" download>
+                                <a href="ResumesaPortfolio.pdf" class="btn btn-primary" download>
                                     <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                                     </svg>
                                     Download CV
                                 </a>
-                                <a href="Resume-updated.pdf" class="btn btn-secondary">
+                                <a href="ResumesaPortfolio.pdf" class="btn btn-secondary">
                                     <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
@@ -240,6 +171,8 @@
                             </p>
                         </div>
                     </div>
+
+                    
                 </div>
             </section>
 
@@ -309,16 +242,17 @@
 
                         <div class="tech-item">
                             <div class="tech-icon">
-                                <svg viewBox="0 0 128 128">
-                                    <path fill="#00758f" d="M2.001 90.458h4.108V74.235l6.36 14.143c.75 1.712 1.777 2.317 3.792 2.317s3.003-.605 3.753-2.317l6.36-14.143v16.223h4.108V74.262c0-1.58-.632-2.345-1.936-2.739-3.121-.974-5.215-.131-6.163 1.713l-6.952 15.905-6.952-15.905c-.948-1.844-3.042-2.687-6.163-1.713-1.304.394-1.936 1.159-1.936 2.739v16.196z"></path>
-                                    <path fill="#f29111" d="M56.647 90.458h4.108V74.262c0-1.58-.632-2.345-1.936-2.739-3.121-.974-5.215-.131-6.163 1.713l-6.952 15.905-6.952-15.905c-.948-1.844-3.042-2.687-6.163-1.713-1.304.394-1.936 1.159-1.936 2.739v16.196h4.108V74.235l6.36 14.143c.75 1.712 1.777 2.317 3.792 2.317s3.003-.605 3.753-2.317l6.36-14.143v16.223z"></path>
-                                    <path fill="#00758f" d="M64.076 90.458h15.784c1.659 0 2.449-.605 2.449-2.317V73.907c0-1.712-.79-2.317-2.449-2.317H64.076c-1.659 0-2.449.605-2.449 2.317v14.234c0 1.712.79 2.317 2.449 2.317zm4.108-4.108V73.907h7.568v12.443h-7.568z"></path>
-                                    <path fill="#f29111" d="M102.084 90.458h4.108V73.907h5.889c1.659 0 2.449-.605 2.449-2.317v-8.708c0-1.712-.79-2.317-2.449-2.317H91.608c-1.659 0-2.449.605-2.449 2.317v8.708c0 1.712.79 2.317 2.449 2.317h5.889v16.551h4.587z"></path>
-                                </svg>
+                                <img 
+                                src="https://www.vectorlogo.zone/logos/mysql/mysql-official.svg"
+                                alt="MySQL Logo"
+                                class="tech-logo">
                             </div>
+
                             <h4 class="tech-name">MySQL</h4>
                             <p class="tech-desc">Database management</p>
-                        </div>
+                         </div>
+
+
                     </div>
                 </div>
             </section>
@@ -336,39 +270,8 @@
                             <span class="education-year">2022 - 2026</span>
                         </div>
                         <p class="education-major">Focussed on Web Development and Frontend Technologies</p>
-                        <!-- <p class="education-courses">Relevant Coursework: Data Structures, Web Development, Database Systems, Network Security, Software Engineering</p> -->
+                        
                     </div>
-                    <!-- <div class="card">
-                        <div class="education-header">
-                            <div>
-                                <h3 class="education-degree">Senior High School - GAS</h3>
-                                <p class="education-school">Holy Trinity College of Camarines Sur</p>
-                            </div>
-                            <span class="education-year">2020 - 2022</span>
-                        </div>
-                        <p class="education-major">General Academic Strand</p>
-                        <p class="education-major">With Honors</p>
-                    </div>
-                    <div class="card">
-                        <div class="education-header">
-                            <div>
-                                <h3 class="education-degree">Junior High School</h3>
-                                <p class="education-school">Holy Trinity College of Camarines Sur</p>
-                            </div>
-                            <span class="education-year">2017 - 2020</span>
-                        </div>
-                        <p class="education-major">With Honors</p>
-                    </div>
-                    <div class="card">
-                        <div class="education-header">
-                            <div>
-                                <h3 class="education-degree">Elementary School</h3>
-                                <p class="education-school">Masoli Elementary School</p>
-                            </div>
-                            <span class="education-year">2010 - 2016</span>
-                        </div>
-                        <p class="education-major">With Honors</p>
-                    </div> -->
                 </div>
             </section>
 
@@ -390,25 +293,25 @@
                         <h3 class="seminar-title">11th Bicol Youth Congress in Information Technology</h3>
                         <p class="seminar-org">Camarines Sur Polytechnic Colleges - JPCS Chapter | April 20-21, 2023</p>
                         <p class="seminar-desc">"Metaverse: Transcending Future to Digital Reality"</p>
-                        <!-- <a href="Assets/by11.png" target="_blank" class="project-link">View Certificate →</a> -->
+                        <a href="Assets/by11.png" target="_blank" class="project-link">View Certificate →</a>
                     </div>
                     <div class="card">
                         <h3 class="seminar-title">12th Bicol Youth Congress in Information Technology</h3>
                         <p class="seminar-org">Camarines Sur Polytechnic Colleges - JPCS Chapter | April 18-19, 2024</p>
                         <p class="seminar-desc">"Infinite Loops: Exploring Endless Possibilities of Technology"</p>
-                        <!-- <a href="Assets/by-12.png" target="_blank" class="project-link">View Certificate →</a> -->
+                        <a href="Assets/by-12.png" target="_blank" class="project-link">View Certificate →</a>
                     </div>
                     <div class="card">
                         <h3 class="seminar-title">13th Bicol Youth Congress in Information Technology</h3>
                         <p class="seminar-org">Camarines Sur Polytechnic Colleges - JPCS Chapter | April 10-11, 2025</p>
                         <p class="seminar-desc">"Bit13yte: Building the Future of Technology, One Byte at a Time"</p>
-                        <!-- <a href="Assets/by-13.png" target="_blank" class="project-link">View Certificate →</a> -->
+                        <a href="Assets/by-13.png" target="_blank" class="project-link">View Certificate →</a>
                     </div>
                     <div class="card">
                         <h3 class="seminar-title">Awareness Campaign</h3>
                         <p class="seminar-org">Camarines Sur Polytechnic Colleges - ASOG Chapter | March 10-14, 2025</p>
                         <p class="seminar-desc">"Turning Concepts into Startups Through Technology Business Incubation"</p>
-                        <!-- <a href="Assets/by11-2.png" target="_blank" class="project-link">View Certificate →</a> -->
+                        <a href="Assets/by11-2.png" target="_blank" class="project-link">View Certificate →</a>
                     </div>
                 </div>
             </section>
@@ -798,11 +701,25 @@
                 
                 <div class="lightbox-counter" id="docLightboxCounter">1 / 15</div>
             </div>
+            
 
-            <!-- Contact Footer -->
+            <!-- Contact Section -->
             <section id="contact" class="section">
-                <h2 class="section-title">Contact</h2>
+                <div class="contact-header-wrapper">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="contact-subtitle">Have a project in mind? Let's work together!</p>
+                </div>
+                
                 <div class="card contact-card">
+                    <!-- Animated particles background -->
+                    <div class="contact-particles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    
                     <div class="contact-grid">
                         <div class="contact-item">
                             <div class="contact-icon" aria-hidden="true">
@@ -813,6 +730,7 @@
                             </div>
                             <h3 class="contact-label">Email</h3>
                             <a href="mailto:kyletipanero19@gmail.com" class="contact-value contact-link">kyletipanero19@gmail.com</a>
+                            <span class="contact-badge">Preferred</span>
                         </div>
                         
                         <div class="contact-item">
@@ -823,6 +741,7 @@
                             </div>
                             <h3 class="contact-label">Phone</h3>
                             <a href="tel:+639514979533" class="contact-value contact-link">+63 951 497 9533</a>
+                            <span class="contact-badge">Available 24/7</span>
                         </div>
                         
                         <div class="contact-item contact-item-wide">
@@ -834,12 +753,29 @@
                             </div>
                             <h3 class="contact-label">Location</h3>
                             <p class="contact-value">Zone 2, Masoli Bato Camarines Sur, Bicol, Philippines, 4435</p>
+                            <span class="contact-badge">Remote Available</span>
                         </div>
+                    </div>
+
+                    <!-- CTA Button (only Send Email) -->
+                    <div class="contact-cta">
+                        <a href="mailto:kyletipanero19@gmail.com" class="cta-button cta-primary">
+                            <svg class="cta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            Send Email
+                        </a>
                     </div>
                     
                     <!-- Footer -->
                     <div class="footer">
+                        <div class="footer-wave">
+                            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="rgba(96, 165, 250, 0.1)"></path>
+                            </svg>
+                        </div>
                         <p class="footer-text">© 2026 Ian Jay Kyle Tipanero. All rights reserved.</p>
+                        <p class="footer-subtext">Built with passion and dedication.</p>
                     </div>
                 </div>
             </section>
@@ -848,10 +784,4 @@
 
     <script src="script.js"></script>
 </body>
-
 </html>
-
-
-
-
-
