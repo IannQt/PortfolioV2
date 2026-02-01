@@ -1,33 +1,27 @@
 // Mobile menu functionality
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const sidebar = document.getElementById('sidebar');
-const overlay = document.getElementById('overlay');
-const navLinks = document.querySelectorAll('.nav-link');
-
-const toggleBtn = document.getElementById("themeToggle");
-const themeIcon = document.getElementById("themeIcon");
-const themeText = document.querySelector(".theme-text");
+const navMenu = document.getElementById('navMenu');
+const navLinks = document.querySelectorAll('.nav-menu .nav-link');
 
 // Toggle mobile menu
-mobileMenuBtn.addEventListener('click', () => {
-    sidebar.classList.toggle('active');
-    overlay.classList.toggle('active');
-});
+if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+}
 
-// Close menu when clicking overlay
-overlay.addEventListener('click', () => {
-    sidebar.classList.remove('active');
-    overlay.classList.remove('active');
-});
-
-// Close sidebar when clicking nav links on mobile
+// Close menu when clicking nav links on mobile
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        if (window.innerWidth < 1024) {
-            sidebar.classList.remove('active');
-            overlay.classList.remove('active');
-        }
+        navMenu.classList.remove('active');
     });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (navMenu && !navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        navMenu.classList.remove('active');
+    }
 });
 
 // Smooth scrolling for navigation links
@@ -374,3 +368,82 @@ document.querySelectorAll('.view-doc-btn').forEach(btn => {
         openDocLightbox(index);
     });
 });
+
+// ===================================
+// SMOOTH SCROLL WITH BLUR EFFECT (AGGRESSIVE MOBILE FIX)
+// ===================================
+
+// Smooth scroll configuration
+document.documentElement.style.scrollBehavior = 'smooth';
+
+// Function to check if element is in viewport (mobile optimized)
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+        // For mobile: more aggressive visibility check
+        const sectionTop = rect.top;
+        const sectionBottom = rect.bottom;
+        const navbarHeight = 64; // 4rem = 64px
+        
+        // Section is visible if it overlaps with viewport (excluding navbar)
+        const isVisible = sectionTop < windowHeight && sectionBottom > navbarHeight;
+        
+        // Additional check: if section takes more than 20% of viewport, it's focused
+        const visibleHeight = Math.min(sectionBottom, windowHeight) - Math.max(sectionTop, navbarHeight);
+        const visibilityPercentage = (visibleHeight / windowHeight) * 100;
+        
+        return isVisible && visibilityPercentage > 20;
+    } else {
+        // For desktop: use center-based calculation
+        const elementCenter = rect.top + (rect.height / 2);
+        const viewportCenter = windowHeight / 2;
+        const threshold = windowHeight * 0.3;
+        
+        return Math.abs(elementCenter - viewportCenter) < threshold;
+    }
+}
+
+// Apply blur effect based on scroll position
+function updateBlurEffect() {
+    const sections = document.querySelectorAll('.section');
+    
+    sections.forEach(section => {
+        if (isInViewport(section)) {
+            section.classList.remove('blur');
+            section.classList.add('focused');
+        } else {
+            section.classList.remove('focused');
+            section.classList.add('blur');
+        }
+    });
+}
+
+// Throttle function to improve performance
+function throttle(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Apply blur effect on scroll with throttling
+const throttledUpdate = throttle(updateBlurEffect, 50);
+
+window.addEventListener('scroll', throttledUpdate);
+window.addEventListener('resize', throttledUpdate);
+
+// Initial check on page load
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(updateBlurEffect, 100);
+});
+
+// Also update on page load
+updateBlurEffect();
